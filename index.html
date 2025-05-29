@@ -30,6 +30,7 @@
       stroke: white;
       stroke-width: 0.5;
       opacity: 0.95;
+      filter: drop-shadow(0 0 2px rgba(0,0,0,0.6));
     }
   </style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -58,7 +59,7 @@
 
     const projection = d3.geoMercator()
       .scale(150)
-      .translate([width / 2, height / 1.4]);
+      .translate([width / 2, height / 2]);
 
     const path = d3.geoPath().projection(projection);
 
