@@ -28,7 +28,7 @@
     }
   </style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://unpkg.com/topojson@3"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
 </head>
 <body>
   <h1>FaithTech Community Map</h1>
@@ -134,7 +134,8 @@
         a.href = pngURL;
         a.download = "faithtech-map.png";
         document.body.appendChild(a);
-        a.click();n        document.body.removeChild(a);
+        a.click();
+        document.body.removeChild(a);
       };
 
       img.src = url;
