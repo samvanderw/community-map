@@ -1,104 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FaithTech Community Map Generator</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FaithTech Community Map</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin: 0; background: #f8f8f8; }
-    #map { width: 100%; height: 80vh; background: #e0e0e0; }
-    .pin { stroke: #000; stroke-width: 0.2px; }
-    .legend { margin-top: 1rem; }
-    .controls { margin: 1rem; }
+    body {
+      margin: 0;
+      background-color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 1em;
+    }
+    svg {
+      width: 90vw;
+      height: 80vh;
+      margin: auto;
+      display: block;
+    }
+    #map-container {
+      background-color: white;
+    }
+    #download-buttons {
+      margin: 1em;
+    }
   </style>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
 </head>
 <body>
-  <h1>FaithTech Community Map Generator</h1>
-  <div class="controls">
-    <input type="file" id="upload" accept=".csv">
+  <h1>FaithTech Community Map</h1>
+  <input type="file" id="csvUpload" accept=".csv" />
+  <div id="map-container"></div>
+  <div id="download-buttons">
     <button onclick="downloadSVG()">Download SVG</button>
     <button onclick="downloadPNG()">Download PNG</button>
   </div>
-  <svg id="map"></svg>
+
   <script>
-    const width = 1000, height = 600;
-    const svg = d3.select("#map").attr("width", width).attr("height", height);
-    const projection = d3.geoMercator().center([-95, 40]).scale(700).translate([width / 2, height / 2]);
+    const currentCityColor = "#F05228";
+    const potentialCityColor = "#E4E0D8";
+
+    const width = 960;
+    const height = 500;
+
+    const svg = d3.select("#map-container")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    const projection = d3.geoNaturalEarth1()
+      .scale(160)
+      .translate([width / 2, height / 2]);
+
     const path = d3.geoPath().projection(projection);
 
-    // Base map (Natural Earth 110m simplified geojson, hosted via CDN)
-    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
-      const countries = topojson.feature(world, world.objects.countries).features;
+    // Load the base map (land only)
+    d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json").then(worldData => {
+      const land = topojson.feature(worldData, worldData.objects.countries);
+
       svg.append("g")
         .selectAll("path")
-        .data(countries)
-        .join("path")
-        .attr("d", path)
-        .attr("fill", "#f3f3f3")
-        .attr("stroke", "#ccc");
+        .data(land.features)
+        .enter().append("path")
+        .attr("fill", "black")
+        .attr("stroke", "none")
+        .attr("d", path);
     });
 
-    document.getElementById('upload').addEventListener('change', function(event) {
-      const file = event.target.files[0];
-      Papa.parse(file, {
-        header: true,
-        dynamicTyping: true,
-        complete: function(results) {
-          plotPins(results.data);
-        }
-      });
+    document.getElementById("csvUpload").addEventListener("change", function(evt) {
+      const file = evt.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const data = d3.csvParse(e.target.result);
+        plotPoints(data);
+      };
+      reader.readAsText(file);
     });
 
-    function plotPins(data) {
-      svg.selectAll("circle").remove();
+    function plotPoints(data) {
+      svg.selectAll("circle").remove(); // Clear old pins
 
-      data.forEach(d => {
-        if (!d.Latitude || !d.Longitude) return;
-        const [x, y] = projection([+d.Longitude, +d.Latitude]);
-        let color = d.Status.includes("Current") ? "#F05228" : "#E4E0D8";
-
-        svg.append("circle")
-          .attr("cx", x)
-          .attr("cy", y)
-          .attr("r", 5)
-          .attr("fill", color)
-          .attr("class", "pin")
-          .append("title")
-          .text(d.City);
-      });
+      svg.append("g")
+        .selectAll("circle")
+        .data(data)
+        .enter().append("circle")
+        .attr("cx", d => projection([+d.Longitude, +d.Latitude])[0])
+        .attr("cy", d => projection([+d.Longitude, +d.Latitude])[1])
+        .attr("r", d => d.Status === "Current City" ? 5 : 3.5)
+        .attr("fill", d => d.Status === "Current City" ? currentCityColor : potentialCityColor)
+        .attr("stroke", "white")
+        .attr("stroke-width", 0.5)
+        .attr("opacity", 0.9);
     }
 
     function downloadSVG() {
-      const svgData = new XMLSerializer().serializeToString(svg.node());
-      const blob = new Blob([svgData], {type: "image/svg+xml;charset=utf-8"});
+      const serializer = new XMLSerializer();
+      const svgString = serializer.serializeToString(svg.node());
+      const blob = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
       const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "faithtech-map.svg";
-      link.click();
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "faithtech-map.svg";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
 
     function downloadPNG() {
+      const svgString = new XMLSerializer().serializeToString(svg.node());
       const canvas = document.createElement("canvas");
       canvas.width = width;
       canvas.height = height;
       const ctx = canvas.getContext("2d");
-      const image = new Image();
-      const svgData = new XMLSerializer().serializeToString(svg.node());
-      const svgBlob = new Blob([svgData], {type: "image/svg+xml;charset=utf-8"});
+
+      const img = new Image();
+      const svgBlob = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
       const url = URL.createObjectURL(svgBlob);
-      image.onload = function() {
-        ctx.drawImage(image, 0, 0);
+
+      img.onload = () => {
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, width, height);
+        ctx.drawImage(img, 0, 0);
         URL.revokeObjectURL(url);
+
         const pngURL = canvas.toDataURL("image/png");
-        const link = document.createElement("a");
-        link.href = pngURL;
-        link.download = "faithtech-map.png";
-        link.click();
+        const a = document.createElement("a");
+        a.href = pngURL;
+        a.download = "faithtech-map.png";
+        document.body.appendChild(a);
+        a.click();n        document.body.removeChild(a);
       };
-      image.src = url;
+
+      img.src = url;
     }
   </script>
 </body>
