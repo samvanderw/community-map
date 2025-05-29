@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;FaithTech Community Map Generator&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: sans-serif; text-align: center; margin: 0; background: #f8f8f8; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#map { width: 100%; height: 80vh; background: #e0e0e0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pin { stroke: #000; stroke-width: 0.2px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.legend { margin-top: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.controls { margin: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;FaithTech Community Map Generator&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="file" id="upload" accept=".csv"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="downloadSVG()"&gt;Download SVG&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="downloadPNG()"&gt;Download PNG&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg id="map"&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const width = 1000, height = 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const svg = d3.select("#map").attr("width", width).attr("height", height);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const projection = d3.geoMercator().center([-95, 40]).scale(700).translate([width / 2, height / 2]);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const path = d3.geoPath().projection(projection);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Base map (Natural Earth 110m simplified geojson, hosted via CDN)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const countries = topojson.feature(world, world.objects.countries).features;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>svg.append("g")</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.selectAll("path")</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.data(countries)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.join("path")</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.attr("d", path)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.attr("fill", "#f3f3f3")</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.attr("stroke", "#ccc");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('upload').addEventListener('change', function(event) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const file = event.target.files[0];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Papa.parse(file, {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>header: true,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>dynamicTyping: true,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>complete: function(results) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>plotPins(results.data);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function plotPins(data) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>svg.selectAll("circle").remove();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>data.forEach(d =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!d.Latitude || !d.Longitude) return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const [x, y] = projection([+d.Longitude, +d.Latitude]);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let color = d.Status.includes("Current") ? "#F05228" : "#E4E0D8";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>svg.append("circle")</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.attr("cx", x)</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.attr("cy", y)</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.attr("r", 5)</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.attr("fill", color)</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.attr("class", "pin")</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.append("title")</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.text(d.City);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function downloadSVG() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const svgData = new XMLSerializer().serializeToString(svg.node());</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const blob = new Blob([svgData], {type: "image/svg+xml;charset=utf-8"});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const url = URL.createObjectURL(blob);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const link = document.createElement("a");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>link.href = url;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>link.download = "faithtech-map.svg";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>link.click();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function downloadPNG() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const canvas = document.createElement("canvas");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>canvas.width = width;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>canvas.height = height;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ctx = canvas.getContext("2d");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const image = new Image();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const svgData = new XMLSerializer().serializeToString(svg.node());</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const svgBlob = new Blob([svgData], {type: "image/svg+xml;charset=utf-8"});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const url = URL.createObjectURL(svgBlob);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>image.onload = function() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>ctx.drawImage(image, 0, 0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>URL.revokeObjectURL(url);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const pngURL = canvas.toDataURL("image/png");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const link = document.createElement("a");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>link.href = pngURL;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>link.download = "faithtech-map.png";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>link.click();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>image.src = url;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
