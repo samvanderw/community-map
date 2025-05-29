@@ -26,8 +26,10 @@
     #download-buttons {
       margin: 1em;
     }
-    .pin {
-      transform: translate(-6px, -24px);
+    .pin path {
+      stroke: white;
+      stroke-width: 0.5;
+      opacity: 0.95;
     }
   </style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -85,28 +87,26 @@
       reader.readAsText(file);
     });
 
- function plotPoints(data) {
-  svg.selectAll(".pin").remove();
+    function plotPoints(data) {
+      svg.selectAll(".pin").remove();
 
-  const pinPath = "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z";
+      const pinPath = "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z";
 
-  svg.append("g")
-    .selectAll("g.pin")
-    .data(data)
-    .enter()
-    .append("g")
-    .attr("class", "pin")
-    .attr("transform", d => {
-      const [x, y] = projection([+d.Longitude, +d.Latitude]);
-      return `translate(${x},${y}) scale(${d.Status === "Current City" ? 0.5 : 0.4}) translate(-12, -24)`; // adjust to fit pin origin
-    })
-    .append("path")
-    .attr("d", pinPath)
-    .attr("fill", d => d.Status === "Current City" ? currentCityColor : potentialCityColor)
-    .attr("stroke", "white")
-    .attr("stroke-width", 0.5)
-    .attr("opacity", 0.95);
-}
+      svg.append("g")
+        .selectAll("g.pin")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("class", "pin")
+        .attr("transform", d => {
+          const [x, y] = projection([+d.Longitude, +d.Latitude]);
+          const scale = d.Status === "Current City" ? 0.6 : 0.45;
+          return `translate(${x},${y}) scale(${scale}) translate(-12, -24)`;
+        })
+        .append("path")
+        .attr("d", pinPath)
+        .attr("fill", d => d.Status === "Current City" ? currentCityColor : potentialCityColor);
+    }
 
     function downloadSVG() {
       const serializer = new XMLSerializer();
