@@ -39,6 +39,10 @@
 <body>
   <h1>FaithTech Community Map</h1>
   <input type="file" id="csvUpload" accept=".csv" />
+  <div>
+    <label><input type="radio" name="projectionType" value="mercator" checked> Mercator</label>
+    <label><input type="radio" name="projectionType" value="equalEarth"> Equal Earth</label>
+  </div>
   <div id="map-container"></div>
   <div id="download-buttons">
     <button onclick="downloadSVG()">Download SVG</button>
@@ -57,7 +61,6 @@
       .attr("width", width)
       .attr("height", height);
 
-    // Define a drop shadow filter for pins
     const defs = svg.append("defs");
     const filter = defs.append("filter")
       .attr("id", "pinShadow")
@@ -72,16 +75,38 @@
       .attr("stdDeviation", "1.5")
       .attr("flood-color", "rgba(0, 0, 0, 0.5)");
 
-    const projection = d3.geoMercator()
-      .scale(150)
-      .translate([width / 2, height / 2]);
+    let projection;
+    let path;
+    let land;
 
-    const path = d3.geoPath().projection(projection);
-
-    // Load the base map (land only)
     d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json").then(worldData => {
-      const land = topojson.feature(worldData, worldData.objects.countries);
+      land = topojson.feature(worldData, worldData.objects.countries);
+      setProjection("mercator");
+      renderMap();
+    });
 
+    document.querySelectorAll("input[name='projectionType']").forEach(input => {
+      input.addEventListener("change", function() {
+        setProjection(this.value);
+        renderMap();
+      });
+    });
+
+    function setProjection(type) {
+      if (type === "equalEarth") {
+        projection = d3.geoEqualEarth()
+          .scale(160)
+          .translate([width / 2, height / 2]);
+      } else {
+        projection = d3.geoMercator()
+          .scale(130)
+          .translate([width / 2, height / 1.45]);
+      }
+      path = d3.geoPath().projection(projection);
+    }
+
+    function renderMap() {
+      svg.selectAll("path").remove();
       svg.append("g")
         .selectAll("path")
         .data(land.features)
@@ -89,7 +114,7 @@
         .attr("fill", "black")
         .attr("stroke", "none")
         .attr("d", path);
-    });
+    }
 
     document.getElementById("csvUpload").addEventListener("change", function(evt) {
       const file = evt.target.files[0];
