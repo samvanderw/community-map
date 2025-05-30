@@ -8,7 +8,7 @@
     body {
       margin: 0;
       background-color: white;
-      font-family: sans-serif;
+      font-family: 'Inter', sans-serif;
       text-align: center;
     }
     h1 {
@@ -32,7 +32,13 @@
       opacity: 0.95;
       filter: url(#pinShadow);
     }
+    #legend {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      text-anchor: start;
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/topojson-client@3"></script>
 </head>
@@ -130,6 +136,7 @@
 
     function plotPoints(data) {
       svg.selectAll(".pin").remove();
+      svg.selectAll("#legend").remove();
 
       const pinPath = "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z";
 
@@ -142,6 +149,8 @@
 
       const potentialCities = normalizedData.filter(d => d.normalizedStatus !== "current city" && d.normalizedStatus !== "active");
       const currentCities = normalizedData.filter(d => d.normalizedStatus === "current city" || d.normalizedStatus === "active");
+
+      const uniqueCountries = (arr) => new Set(arr.map(d => d.Country.trim())).size;
 
       svg.append("g")
         .selectAll("g.pin")
@@ -170,6 +179,22 @@
         .append("path")
         .attr("d", pinPath)
         .attr("fill", currentCityColor);
+
+      // Legend
+      svg.append("g")
+        .attr("id", "legend")
+        .attr("transform", `translate(${width * 0.05}, ${height * 0.85})`)
+        .call(g => {
+          g.append("text")
+            .attr("y", 0)
+            .attr("fill", currentCityColor)
+            .text(`${currentCities.length} Cities Across ${uniqueCountries(currentCities)} Countries`);
+
+          g.append("text")
+            .attr("y", 20)
+            .attr("fill", potentialCityColor)
+            .text(`${potentialCities.length} Potential Future Cities Across ${uniqueCountries(potentialCities)} Countries`);
+        });
     }
 
     function downloadSVG() {
