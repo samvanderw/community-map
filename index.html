@@ -37,6 +37,20 @@
       font-size: 14px;
       text-anchor: start;
     }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .legend-color {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+    .legend-label {
+      color: black;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -180,21 +194,37 @@
         .attr("d", pinPath)
         .attr("fill", currentCityColor);
 
-      // Legend
-      svg.append("g")
+      // Legend with colored pins and black text
+      const legend = svg.append("g")
         .attr("id", "legend")
-        .attr("transform", `translate(${width * 0.05}, ${height * 0.85})`)
-        .call(g => {
-          g.append("text")
-            .attr("y", 0)
-            .attr("fill", currentCityColor)
-            .text(`${currentCities.length} Cities Across ${uniqueCountries(currentCities)} Countries`);
+        .attr("transform", `translate(${width * 0.05}, ${height * 0.85})`);
 
-          g.append("text")
-            .attr("y", 20)
-            .attr("fill", potentialCityColor)
-            .text(`${potentialCities.length} Potential Future Cities Across ${uniqueCountries(potentialCities)} Countries`);
-        });
+      const legendItems = [
+        {
+          color: currentCityColor,
+          label: `${currentCities.length} Cities Across ${uniqueCountries(currentCities)} Countries`
+        },
+        {
+          color: potentialCityColor,
+          label: `${potentialCities.length} Potential Future Cities Across ${uniqueCountries(potentialCities)} Countries`
+        }
+      ];
+
+      legendItems.forEach((item, i) => {
+        const group = legend.append("g").attr("transform", `translate(0, ${i * 20})`);
+        group.append("path")
+          .attr("d", pinPath)
+          .attr("transform", "scale(0.6) translate(-12, -24)")
+          .attr("fill", item.color)
+          .attr("stroke", "black")
+          .attr("stroke-width", 0.5);
+
+        group.append("text")
+          .attr("x", 16)
+          .attr("y", 5)
+          .attr("fill", "black")
+          .text(item.label);
+      });
     }
 
     function downloadSVG() {
