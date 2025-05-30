@@ -188,7 +188,7 @@
         .attr("class", "pin")
         .attr("transform", d => {
           const [x, y] = projection([+d.Longitude, +d.Latitude]);
-          return `translate(${x},${y}) scale(1) translate(-12, -24)`;
+          return `translate(${x},${y}) scale(1.5) translate(-12, -24)`;
         })
         .append("path")
         .attr("d", pinPath)
