@@ -71,7 +71,7 @@
 
   <script>
     const currentCityColor = "#F05228";
-    const potentialCityColor = "#A5A5A5";
+    const potentialCityColor = "#CDCDCD";
 
     const width = 960;
     const height = 500;
@@ -158,7 +158,7 @@
         return d.Latitude && d.Longitude && !isNaN(+d.Latitude) && !isNaN(+d.Longitude);
       }).map(d => ({
         ...d,
-        normalizedStatus: (d.Status || "").trim().toLowerCase()
+        normalizedStatus: (d["Map Status"] || "").trim().toLowerCase()
       }));
 
       const potentialCities = normalizedData.filter(d => d.normalizedStatus !== "current city" && d.normalizedStatus !== "active");
@@ -194,7 +194,6 @@
         .attr("d", pinPath)
         .attr("fill", currentCityColor);
 
-      // Legend with colored pins and black text
       const legend = svg.append("g")
         .attr("id", "legend")
         .attr("transform", `translate(${width * 0.05}, ${height * 0.85})`);
