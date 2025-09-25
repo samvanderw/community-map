@@ -34,10 +34,10 @@
     #download-buttons {
       margin: 1em;
     }
+    /* This rule is now a fallback, inline styles will take precedence */
     .pin path {
       stroke: black;
-      /* UPDATED: Increased stroke-width for new icon's scale */
-      stroke-width: 10;
+      stroke-width: 15;
       opacity: 0.95;
       filter: url(#pinShadow);
     }
@@ -74,7 +74,6 @@
       <label><input type="radio" name="projectionType" value="mercator" checked> Mercator</label>
       <label><input type="radio" name="projectionType" value="equalEarth"> Equal Earth</label>
     </div>
-    <!-- ADDED: Dropdown for color selection -->
     <div>
       <label for="color-selector">Current City Color: </label>
       <select id="color-selector">
@@ -228,7 +227,10 @@
         })
         .append("path")
         .attr("d", pinPath)
-        .attr("fill", potentialCityColor);
+        .attr("fill", potentialCityColor)
+        // FIXED: Added inline styles for SVG export
+        .style("stroke", "black")
+        .style("stroke-width", 15);
 
       g.append("g")
         .selectAll("g.pin")
@@ -244,10 +246,12 @@
         .append("path")
         .attr("class", "current-city-pin")
         .attr("d", pinPath)
-        .attr("fill", currentCityColor);
+        .attr("fill", currentCityColor)
+        // FIXED: Added inline styles for SVG export
+        .style("stroke", "black")
+        .style("stroke-width", 15);
 
-      // UPDATED: Changed legend position based on Lat/Long coordinates
-      const legendCoordinates = [-46.63338240, -43.24895]; // [Longitude of São Paulo, Latitude of Trelew]
+      const legendCoordinates = [-49.27127240, -38.0054771]; // [Longitude of Curitiba, Latitude of Mar Del Plata]
       const [legendX, legendY] = projection(legendCoordinates);
 
       const legend = svg.append("g")
@@ -267,7 +271,6 @@
         }
       ];
       
-      // ADDED: Semi-transparent background for the legend
       legend.append("rect")
         .attr("x", -10)
         .attr("y", -15)
@@ -289,68 +292,88 @@
         group.append("text")
           .attr("x", 25)
           .attr("y", -5)
-          // FIXED: Changed text color to be visible
           .attr("fill", "black")
           .style("font-weight", "bold")
           .text(item.label);
       });
     }
 
-    function downloadSVG() {
-        const originalTransform = g.attr("transform");
-        g.attr("transform", "");
-
-        const serializer = new XMLSerializer();
-        const svgString = serializer.serializeToString(svg.node());
-        const blob = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "faithtech-map.svg";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-
-        g.attr("transform", originalTransform);
+    // UPDATED: Function to embed styles for download
+    function embedStylesForDownload(callback) {
+        const styles = `
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+            #legend text {
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                fill: black;
+            }
+        `;
+        const styleElement = defs.append("style").text(styles);
+        
+        // Allow browser time to fetch and apply font
+        setTimeout(() => {
+            callback();
+            styleElement.remove();
+        }, 500);
     }
 
-    function downloadPNG() {
-        const originalTransform = g.attr("transform");
-        g.attr("transform", "");
+    function downloadSVG() {
+        embedStylesForDownload(() => {
+            const originalTransform = g.attr("transform");
+            g.attr("transform", "");
 
-        const svgString = new XMLSerializer().serializeToString(svg.node());
-        const canvas = document.createElement("canvas");
-        canvas.width = width * 2;
-        canvas.height = height * 2;
-        const ctx = canvas.getContext("2d");
-
-        const img = new Image();
-        const svgBlob = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
-        const url = URL.createObjectURL(svgBlob);
-
-        img.onload = () => {
-            ctx.fillStyle = "white";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            URL.revokeObjectURL(url);
-
-            const pngURL = canvas.toDataURL("image/png");
+            const serializer = new XMLSerializer();
+            const svgString = serializer.serializeToString(svg.node());
+            const blob = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
+            const url = URL.createObjectURL(blob);
             const a = document.createElement("a");
-            a.href = pngURL;
-            a.download = "faithtech-map.png";
+            a.href = url;
+            a.download = "faithtech-map.svg";
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
+            URL.revokeObjectURL(url);
 
             g.attr("transform", originalTransform);
-        };
+        });
+    }
 
-        img.src = url;
+    function downloadPNG() {
+        embedStylesForDownload(() => {
+            const originalTransform = g.attr("transform");
+            g.attr("transform", "");
+
+            const svgString = new XMLSerializer().serializeToString(svg.node());
+            const canvas = document.createElement("canvas");
+            canvas.width = width * 2; // Higher resolution for PNG
+            canvas.height = height * 2;
+            const ctx = canvas.getContext("2d");
+
+            const img = new Image();
+            const svgBlob = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
+            const url = URL.createObjectURL(svgBlob);
+
+            img.onload = () => {
+                ctx.fillStyle = "white";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                URL.revokeObjectURL(url);
+
+                const pngURL = canvas.toDataURL("image/png");
+                const a = document.createElement("a");
+                a.href = pngURL;
+                a.download = "faithtech-map.png";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+
+                g.attr("transform", originalTransform);
+            };
+            img.src = url;
+        });
     }
   </script>
 </body>
 </html>
-
-
 
