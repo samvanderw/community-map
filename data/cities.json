@@ -1,4 +1,1818 @@
 {
-  "generatedAt": null,
-  "cities": []
+  "generatedAt": "2026-09-01T18:38:19.193Z",
+  "cities": [
+    {
+      "Name": "Aba",
+      "Latitude": 5.10658,
+      "Longitude": 7.36667,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Abeokuta",
+      "Latitude": 7.15571,
+      "Longitude": 3.34509,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Abidjan",
+      "Latitude": 5.35444,
+      "Longitude": -4.00167,
+      "Country": "Côte d'Ivoire",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Abuja",
+      "Latitude": 9.05785,
+      "Longitude": 7.49508,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Accra",
+      "Latitude": 5.55602,
+      "Longitude": -0.1969,
+      "Country": "Ghana",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Addis Ababa",
+      "Latitude": 9.02497,
+      "Longitude": 38.74689,
+      "Country": "Ethiopia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Adelaide",
+      "Latitude": -34.92866,
+      "Longitude": 138.59863,
+      "Country": "Australia",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Ado Odo",
+      "Latitude": 6.59098,
+      "Longitude": 2.95756,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Ado-Ekiti",
+      "Latitude": 7.62329,
+      "Longitude": 5.22087,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Akure",
+      "Latitude": 7.25256,
+      "Longitude": 5.19312,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Alexandria",
+      "Latitude": 31.20176,
+      "Longitude": 29.91582,
+      "Country": "Egypt",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Amherst",
+      "Latitude": 42.37319,
+      "Longitude": -72.51988,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Amman",
+      "Latitude": 31.95522,
+      "Longitude": 35.94503,
+      "Country": "Jordan",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Amsterdam",
+      "Latitude": 52.37403,
+      "Longitude": 4.88969,
+      "Country": "Netherlands",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Antananarivo",
+      "Latitude": -18.91368,
+      "Longitude": 47.53613,
+      "Country": "Madagascar",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Arequipa",
+      "Latitude": -16.39889,
+      "Longitude": -71.535,
+      "Country": "Peru",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Athens",
+      "Latitude": 33.96095,
+      "Longitude": -83.37794,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Atlanta",
+      "Latitude": 33.749,
+      "Longitude": -84.38798,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Auckland",
+      "Latitude": -36.84853,
+      "Longitude": 174.76349,
+      "Country": "New Zealand",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Augusta",
+      "Latitude": 33.47097,
+      "Longitude": -81.97484,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Austin",
+      "Latitude": 30.26715,
+      "Longitude": -97.74306,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Badarpur",
+      "Latitude": 30.7941611,
+      "Longitude": 76.5605879,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Baku",
+      "Latitude": 40.37767,
+      "Longitude": 49.89201,
+      "Country": "Azerbaijan",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bangkok",
+      "Latitude": 13.75398,
+      "Longitude": 100.50144,
+      "Country": "Thailand",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Barishal",
+      "Latitude": 22.70497,
+      "Longitude": 90.37013,
+      "Country": "Bangladesh",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Barranquilla",
+      "Latitude": 10.96854,
+      "Longitude": -74.78132,
+      "Country": "Colombia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Beira",
+      "Latitude": -19.84361,
+      "Longitude": 34.83889,
+      "Country": "Mozambique",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Beirut",
+      "Latitude": 33.89332,
+      "Longitude": 35.50157,
+      "Country": "Lebanon",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Belém",
+      "Latitude": -1.45583,
+      "Longitude": -48.50444,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Belfast",
+      "Latitude": 54.59682,
+      "Longitude": -5.92541,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Belo Horizonte",
+      "Latitude": -19.92083,
+      "Longitude": -43.93778,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bengaluru",
+      "Latitude": 12.97194,
+      "Longitude": 77.59369,
+      "Country": "India",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Benin City",
+      "Latitude": 6.33815,
+      "Longitude": 5.62575,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bhopāl",
+      "Latitude": 23.25469,
+      "Longitude": 77.40289,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bishkek",
+      "Latitude": 42.87,
+      "Longitude": 74.59,
+      "Country": "Kyrgyzstan",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bogotá",
+      "Latitude": 4.60971,
+      "Longitude": -74.08175,
+      "Country": "Colombia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bordeaux",
+      "Latitude": 44.84044,
+      "Longitude": -0.5805,
+      "Country": "France",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Boston",
+      "Latitude": 42.35843,
+      "Longitude": -71.05977,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Bournemouth",
+      "Latitude": 50.72048,
+      "Longitude": -1.8795,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Brazzaville",
+      "Latitude": -4.26613,
+      "Longitude": 15.28318,
+      "Country": "Congo",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Brisbane",
+      "Latitude": -27.46794,
+      "Longitude": 153.02809,
+      "Country": "Australia",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Brno",
+      "Latitude": 49.19522,
+      "Longitude": 16.60796,
+      "Country": "Czechia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bucharest",
+      "Latitude": 44.43225,
+      "Longitude": 26.10626,
+      "Country": "Romania",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Cairo",
+      "Latitude": 30.06263,
+      "Longitude": 31.24967,
+      "Country": "Egypt",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Calgary",
+      "Latitude": 51.05011,
+      "Longitude": -114.08529,
+      "Country": "Canada",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Cambridge",
+      "Latitude": 52.2,
+      "Longitude": 0.11667,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Campinas",
+      "Latitude": -22.90556,
+      "Longitude": -47.06083,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Campo Grande",
+      "Latitude": -20.44278,
+      "Longitude": -54.64639,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Canberra",
+      "Latitude": -35.28346,
+      "Longitude": 149.12807,
+      "Country": "Australia",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Canterbury",
+      "Latitude": 51.2800275,
+      "Longitude": 1.0802533,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Cape Town",
+      "Latitude": -33.92584,
+      "Longitude": 18.42322,
+      "Country": "South Africa",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Caracas",
+      "Latitude": 10.48801,
+      "Longitude": -66.87919,
+      "Country": "Venezuela (Bolivarian Republic of)",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Cardiff",
+      "Latitude": 51.48,
+      "Longitude": -3.18,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Champaign",
+      "Latitude": 40.1164841,
+      "Longitude": -88.2430932,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Charleston",
+      "Latitude": 32.77657,
+      "Longitude": -79.93092,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Charlotte",
+      "Latitude": 35.22709,
+      "Longitude": -80.84313,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Chennai",
+      "Latitude": 13.08784,
+      "Longitude": 80.27847,
+      "Country": "India",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Chesapeake",
+      "Latitude": 36.81904,
+      "Longitude": -76.27494,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Chicago",
+      "Latitude": 41.85003,
+      "Longitude": -87.65005,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Chihuahua",
+      "Latitude": 28.63528,
+      "Longitude": -106.08889,
+      "Country": "Mexico",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Chitungwiza",
+      "Latitude": -18.01274,
+      "Longitude": 31.07555,
+      "Country": "Zimbabwe",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Cincinnati",
+      "Latitude": 39.12711,
+      "Longitude": -84.51439,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Cleveland",
+      "Latitude": 41.4995,
+      "Longitude": -81.69541,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Colombo",
+      "Latitude": 6.93548,
+      "Longitude": 79.84868,
+      "Country": "Sri Lanka",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Columbia",
+      "Latitude": 34.00071,
+      "Longitude": -81.03481,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Columbus",
+      "Latitude": 39.96118,
+      "Longitude": -82.99879,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Concepción",
+      "Latitude": -36.82699,
+      "Longitude": -73.04977,
+      "Country": "Chile",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Copenhagen",
+      "Latitude": 55.67594,
+      "Longitude": 12.56553,
+      "Country": "Denmark",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Córdoba",
+      "Latitude": 37.89155,
+      "Longitude": -4.77275,
+      "Country": "Spain",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Cotonou",
+      "Latitude": 6.36536,
+      "Longitude": 2.41833,
+      "Country": "Benin",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Curitiba",
+      "Latitude": -25.42778,
+      "Longitude": -49.27306,
+      "Country": "Brazil",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Dallas",
+      "Latitude": 32.78306,
+      "Longitude": -96.80667,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Dar es Salaam",
+      "Latitude": -6.82349,
+      "Longitude": 39.26951,
+      "Country": "United Republic of Tanzania",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Denver",
+      "Latitude": 39.73915,
+      "Longitude": -104.9847,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Dhaka",
+      "Latitude": 23.7104,
+      "Longitude": 90.40744,
+      "Country": "Bangladesh",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Donostia / San Sebastián",
+      "Latitude": 43.31283,
+      "Longitude": -1.97499,
+      "Country": "Spain",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Dorchester",
+      "Latitude": 50.711163,
+      "Longitude": -2.441181,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Douala",
+      "Latitude": 4.04827,
+      "Longitude": 9.70428,
+      "Country": "Cameroon",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Dubai",
+      "Latitude": 25.07725,
+      "Longitude": 55.30927,
+      "Country": "United Arab Emirates",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Dublin",
+      "Latitude": 53.33306,
+      "Longitude": -6.24889,
+      "Country": "Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Durham",
+      "Latitude": 35.99403,
+      "Longitude": -78.89862,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Eluru",
+      "Latitude": 16.7106654,
+      "Longitude": 81.0952381,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Erbil",
+      "Latitude": 36.18333,
+      "Longitude": 44.01193,
+      "Country": "Iraq",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Fort Wayne",
+      "Latitude": 41.1306,
+      "Longitude": -85.12886,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Fremont",
+      "Latitude": 37.54827,
+      "Longitude": -121.98857,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Gilgit",
+      "Latitude": 35.920834,
+      "Longitude": 74.308334,
+      "Country": "Pakistan",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Glasgow",
+      "Latitude": 55.86515,
+      "Longitude": -4.25763,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Gold Coast",
+      "Latitude": -28.00029,
+      "Longitude": 153.43088,
+      "Country": "Australia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Greenville",
+      "Latitude": 34.851354,
+      "Longitude": -82.3984882,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Gujranwala",
+      "Latitude": 32.15567,
+      "Longitude": 74.18705,
+      "Country": "Pakistan",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Gulu",
+      "Latitude": 2.77457,
+      "Longitude": 32.29899,
+      "Country": "Uganda",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Hamilton",
+      "Latitude": 43.25011,
+      "Longitude": -79.84963,
+      "Country": "Canada",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Helsinki",
+      "Latitude": 60.16952,
+      "Longitude": 24.93545,
+      "Country": "Finland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Ho Chi Minh City",
+      "Latitude": 10.82302,
+      "Longitude": 106.62965,
+      "Country": "Viet Nam",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Hong Kong",
+      "Latitude": 22.27832,
+      "Longitude": 114.17469,
+      "Country": "Hong Kong",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Houston",
+      "Latitude": 29.76328,
+      "Longitude": -95.36327,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Hubli",
+      "Latitude": 15.34776,
+      "Longitude": 75.13378,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Hyderabad",
+      "Latitude": 17.38405,
+      "Longitude": 78.45636,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Iaşi",
+      "Latitude": 47.16667,
+      "Longitude": 27.6,
+      "Country": "Romania",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Ibadan",
+      "Latitude": 7.37756,
+      "Longitude": 3.90591,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Ile-Ife",
+      "Latitude": 7.4824,
+      "Longitude": 4.56032,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Ilorin",
+      "Latitude": 8.49664,
+      "Longitude": 4.54214,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Indianapolis",
+      "Latitude": 39.76838,
+      "Longitude": -86.15804,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Islamabad",
+      "Latitude": 33.72148,
+      "Longitude": 73.04329,
+      "Country": "Pakistan",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Istanbul",
+      "Latitude": 41.01384,
+      "Longitude": 28.94966,
+      "Country": "Turkey",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Itajaí",
+      "Latitude": -26.90778,
+      "Longitude": -48.66194,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Jabalpur",
+      "Latitude": 23.16697,
+      "Longitude": 79.95006,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Jakarta",
+      "Latitude": -6.21462,
+      "Longitude": 106.84513,
+      "Country": "Indonesia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "João Pessoa",
+      "Latitude": -7.115,
+      "Longitude": -34.86306,
+      "Country": "Brazil",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Johannesburg",
+      "Latitude": -26.20227,
+      "Longitude": 28.04363,
+      "Country": "South Africa",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Jos",
+      "Latitude": 9.92849,
+      "Longitude": 8.89212,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Jundiaí",
+      "Latitude": -23.18639,
+      "Longitude": -46.88417,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kaduna",
+      "Latitude": 10.52641,
+      "Longitude": 7.43879,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kaiserslautern",
+      "Latitude": 49.4432174,
+      "Longitude": 7.7689951,
+      "Country": "Germany",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kampala",
+      "Latitude": 0.31628,
+      "Longitude": 32.58219,
+      "Country": "Uganda",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kansas City",
+      "Latitude": 39.09973,
+      "Longitude": -94.57857,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Kanyakumari",
+      "Latitude": 8.079252,
+      "Longitude": 77.5499338,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Karachi",
+      "Latitude": 24.8608,
+      "Longitude": 67.0104,
+      "Country": "Pakistan",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kathmandu",
+      "Latitude": 27.70169,
+      "Longitude": 85.3206,
+      "Country": "Nepal",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kigali",
+      "Latitude": -1.94995,
+      "Longitude": 30.05885,
+      "Country": "Rwanda",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kikwit",
+      "Latitude": -5.04098,
+      "Longitude": 18.81619,
+      "Country": "Democratic Republic of the Congo",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kinshasa",
+      "Latitude": -4.32758,
+      "Longitude": 15.31357,
+      "Country": "Democratic Republic of the Congo",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kisumu",
+      "Latitude": -0.10221,
+      "Longitude": 34.76171,
+      "Country": "Kenya",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kolkata",
+      "Latitude": 22.56263,
+      "Longitude": 88.36304,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kraków",
+      "Latitude": 50.06143,
+      "Longitude": 19.93658,
+      "Country": "Poland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kuala Lumpur",
+      "Latitude": 3.1412,
+      "Longitude": 101.68653,
+      "Country": "Malaysia",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Kuching",
+      "Latitude": 1.55,
+      "Longitude": 110.33333,
+      "Country": "Malaysia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "La Paz",
+      "Latitude": -16.5,
+      "Longitude": -68.15,
+      "Country": "Bolivia (Plurinational State of)",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Lagos",
+      "Latitude": 6.45407,
+      "Longitude": 3.39467,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Lahore",
+      "Latitude": 31.558,
+      "Longitude": 74.35071,
+      "Country": "Pakistan",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Las Vegas",
+      "Latitude": 36.17497,
+      "Longitude": -115.13722,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Leeds",
+      "Latitude": 53.79648,
+      "Longitude": -1.54785,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Lilongwe",
+      "Latitude": -13.96692,
+      "Longitude": 33.78725,
+      "Country": "Malawi",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Limerick",
+      "Latitude": 52.668018,
+      "Longitude": -8.630498,
+      "Country": "Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Linz",
+      "Latitude": 48.30639,
+      "Longitude": 14.28611,
+      "Country": "Austria",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Lisbon",
+      "Latitude": 38.71667,
+      "Longitude": -9.13333,
+      "Country": "Portugal",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "London",
+      "Latitude": 51.50853,
+      "Longitude": -0.12574,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Los Angeles",
+      "Latitude": 34.05223,
+      "Longitude": -118.24368,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Lubbock",
+      "Latitude": 33.57786,
+      "Longitude": -101.85517,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Lucknow",
+      "Latitude": 26.83928,
+      "Longitude": 80.92313,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Lusaka",
+      "Latitude": -15.40669,
+      "Longitude": 28.28713,
+      "Country": "Zambia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Madrid",
+      "Latitude": 40.4165,
+      "Longitude": -3.70256,
+      "Country": "Spain",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Makurdi",
+      "Latitude": 7.73375,
+      "Longitude": 8.52139,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Manado",
+      "Latitude": 1.48218,
+      "Longitude": 124.84892,
+      "Country": "Indonesia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Manchester",
+      "Latitude": 53.48095,
+      "Longitude": -2.23743,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Mangaluru",
+      "Latitude": 12.91723,
+      "Longitude": 74.85603,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Mar del Plata",
+      "Latitude": -38.00042,
+      "Longitude": -57.5562,
+      "Country": "Argentina",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Melbourne",
+      "Latitude": -37.814,
+      "Longitude": 144.96332,
+      "Country": "Australia",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Mendoza",
+      "Latitude": -32.89084,
+      "Longitude": -68.82717,
+      "Country": "Argentina",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Mexico City",
+      "Latitude": 19.42847,
+      "Longitude": -99.12766,
+      "Country": "Mexico",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Miami",
+      "Latitude": 25.77427,
+      "Longitude": -80.19366,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Milwaukee",
+      "Latitude": 43.0389,
+      "Longitude": -87.90647,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Minneapolis",
+      "Latitude": 44.97997,
+      "Longitude": -93.26384,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Monrovia",
+      "Latitude": 6.30054,
+      "Longitude": -10.7969,
+      "Country": "Liberia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Montréal",
+      "Latitude": 45.50884,
+      "Longitude": -73.58781,
+      "Country": "Canada",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Moratuwa",
+      "Latitude": 6.773,
+      "Longitude": 79.8816,
+      "Country": "Sri Lanka",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Moshi",
+      "Latitude": -3.35,
+      "Longitude": 37.33333,
+      "Country": "United Republic of Tanzania",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Mumbai",
+      "Latitude": 19.07283,
+      "Longitude": 72.88261,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Mwanza",
+      "Latitude": -2.51667,
+      "Longitude": 32.9,
+      "Country": "United Republic of Tanzania",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Mzuzu",
+      "Latitude": -11.46556,
+      "Longitude": 34.02071,
+      "Country": "Malawi",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Nagpur",
+      "Latitude": 21.14631,
+      "Longitude": 79.08491,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Nairobi",
+      "Latitude": -1.28333,
+      "Longitude": 36.81667,
+      "Country": "Kenya",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Nashville",
+      "Latitude": 36.16589,
+      "Longitude": -86.78444,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Neuquén",
+      "Latitude": -38.95161,
+      "Longitude": -68.0591,
+      "Country": "Argentina",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "New Orleans",
+      "Latitude": 29.95465,
+      "Longitude": -90.07507,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "New York City",
+      "Latitude": 40.71427,
+      "Longitude": -74.00597,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Newark",
+      "Latitude": 40.73566,
+      "Longitude": -74.17237,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Newcastle",
+      "Latitude": 54.97328,
+      "Longitude": -1.61396,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Novi Sad",
+      "Latitude": 45.25167,
+      "Longitude": 19.83694,
+      "Country": "Serbia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Nyanza",
+      "Latitude": -2.3524553,
+      "Longitude": 29.7504906,
+      "Country": "Rwanda",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Oakland",
+      "Latitude": 37.80437,
+      "Longitude": -122.2708,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Oklahoma City",
+      "Latitude": 35.46756,
+      "Longitude": -97.51643,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Old Bridge",
+      "Latitude": 40.402714,
+      "Longitude": -74.305428,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Ongole",
+      "Latitude": 15.50357,
+      "Longitude": 80.04454,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Onitsha",
+      "Latitude": 6.14978,
+      "Longitude": 6.78569,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Orange County",
+      "Latitude": 33.6673311,
+      "Longitude": -117.72425479,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Orlando",
+      "Latitude": 28.53834,
+      "Longitude": -81.37924,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Ottawa",
+      "Latitude": 45.41117,
+      "Longitude": -75.69812,
+      "Country": "Canada",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Oxford",
+      "Latitude": 51.75222,
+      "Longitude": -1.25596,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Pamplona",
+      "Latitude": 42.81687,
+      "Longitude": -1.64323,
+      "Country": "Spain",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Paris",
+      "Latitude": 48.85341,
+      "Longitude": 2.3488,
+      "Country": "France",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Patna",
+      "Latitude": 25.59408,
+      "Longitude": 85.13563,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Pematangsiantar",
+      "Latitude": 2.9595,
+      "Longitude": 99.0687,
+      "Country": "Indonesia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Perth",
+      "Latitude": -31.95224,
+      "Longitude": 115.8614,
+      "Country": "Australia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Philadelphia",
+      "Latitude": 39.95238,
+      "Longitude": -75.16362,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Phnom Penh",
+      "Latitude": 11.56245,
+      "Longitude": 104.91601,
+      "Country": "Cambodia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Phoenix",
+      "Latitude": 33.44838,
+      "Longitude": -112.07404,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Pittsburgh",
+      "Latitude": 40.44062,
+      "Longitude": -79.99589,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Pointe-Noire",
+      "Latitude": -4.77609,
+      "Longitude": 11.86352,
+      "Country": "Congo",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Port-au-Prince",
+      "Latitude": 18.54349,
+      "Longitude": -72.33881,
+      "Country": "Haiti",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Portland",
+      "Latitude": 45.52345,
+      "Longitude": -122.67621,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Prague",
+      "Latitude": 50.08804,
+      "Longitude": 14.42076,
+      "Country": "Czechia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Pretoria",
+      "Latitude": -25.74486,
+      "Longitude": 28.18783,
+      "Country": "South Africa",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Pune",
+      "Latitude": 18.51957,
+      "Longitude": 73.85535,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Punta del Este",
+      "Latitude": -34.9667,
+      "Longitude": -54.95,
+      "Country": "Uruguay",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Raleigh",
+      "Latitude": 35.7721,
+      "Longitude": -78.63861,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Recife",
+      "Latitude": -8.05389,
+      "Longitude": -34.88111,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Reggio Emilia",
+      "Latitude": 44.69825,
+      "Longitude": 10.63125,
+      "Country": "Italy",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Regina",
+      "Latitude": 50.45008,
+      "Longitude": -104.6178,
+      "Country": "Canada",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Richmond",
+      "Latitude": 37.55376,
+      "Longitude": -77.46026,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Rio - Niterói",
+      "Latitude": -22.88333,
+      "Longitude": -43.10361,
+      "Country": "Brazil",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Rio de Janeiro",
+      "Latitude": -22.90642,
+      "Longitude": -43.18223,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Rochester",
+      "Latitude": 43.15478,
+      "Longitude": -77.61556,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Sacramento",
+      "Latitude": 38.58157,
+      "Longitude": -121.4944,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Salem",
+      "Latitude": 44.9429,
+      "Longitude": -123.0351,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Salt Lake City",
+      "Latitude": 40.76078,
+      "Longitude": -111.89105,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "San Antonio",
+      "Latitude": 29.42412,
+      "Longitude": -98.49363,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "San Diego",
+      "Latitude": 32.71571,
+      "Longitude": -117.16472,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "San Francisco",
+      "Latitude": 37.77493,
+      "Longitude": -122.41942,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "San Jose",
+      "Latitude": 37.33939,
+      "Longitude": -121.89496,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Santa Cruz de la Sierra",
+      "Latitude": -17.78629,
+      "Longitude": -63.18117,
+      "Country": "Bolivia (Plurinational State of)",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Santo Domingo",
+      "Latitude": 18.47186,
+      "Longitude": -69.89232,
+      "Country": "Dominican Republic",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "São José dos Campos",
+      "Latitude": -23.17944,
+      "Longitude": -45.88694,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "São Paulo",
+      "Latitude": -23.5475,
+      "Longitude": -46.63611,
+      "Country": "Brazil",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Seattle",
+      "Latitude": 47.60621,
+      "Longitude": -122.33207,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Seoul",
+      "Latitude": 37.566,
+      "Longitude": 126.9784,
+      "Country": "Republic of Korea",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Shanghai",
+      "Latitude": 31.22222,
+      "Longitude": 121.45806,
+      "Country": "China",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Sheffield",
+      "Latitude": 53.38297,
+      "Longitude": -1.4659,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Silicon Valley",
+      "Latitude": 37.4429964,
+      "Longitude": -122.1545229,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Singapore",
+      "Latitude": 1.28967,
+      "Longitude": 103.85007,
+      "Country": "Singapore",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Sioux Falls",
+      "Latitude": 43.54997,
+      "Longitude": -96.70033,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Sofia",
+      "Latitude": 42.69751,
+      "Longitude": 23.32415,
+      "Country": "Bulgaria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Sorsogon",
+      "Latitude": 12.9707848,
+      "Longitude": 124.0052543,
+      "Country": "Philippines",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "St. Louis",
+      "Latitude": 38.62727,
+      "Longitude": -90.19789,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Stockholm",
+      "Latitude": 59.32938,
+      "Longitude": 18.06871,
+      "Country": "Sweden",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Sydney",
+      "Latitude": -33.86785,
+      "Longitude": 151.20732,
+      "Country": "Australia",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Taipei",
+      "Latitude": 25.04776,
+      "Longitude": 121.53185,
+      "Country": "Taiwan",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Tampa",
+      "Latitude": 27.94752,
+      "Longitude": -82.45843,
+      "Country": "United States of America",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Tel Aviv",
+      "Latitude": 32.08088,
+      "Longitude": 34.78057,
+      "Country": "Israel",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Thika",
+      "Latitude": -1.03326,
+      "Longitude": 37.06933,
+      "Country": "Kenya",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Tirana",
+      "Latitude": 41.3275,
+      "Longitude": 19.81889,
+      "Country": "Albania",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Tokyo",
+      "Latitude": 35.6895,
+      "Longitude": 139.69171,
+      "Country": "Japan",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Toronto",
+      "Latitude": 43.70643,
+      "Longitude": -79.39864,
+      "Country": "Canada",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Ulaanbaatar",
+      "Latitude": 47.90771,
+      "Longitude": 106.88324,
+      "Country": "Mongolia",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Utrecht",
+      "Latitude": 52.09083,
+      "Longitude": 5.12222,
+      "Country": "Netherlands",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Uvira",
+      "Latitude": -3.39534,
+      "Longitude": 29.13779,
+      "Country": "Democratic Republic of the Congo",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Uyo",
+      "Latitude": 5.05127,
+      "Longitude": 7.9335,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Valdivia",
+      "Latitude": -39.81422,
+      "Longitude": -73.24589,
+      "Country": "Chile",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Vancouver",
+      "Latitude": 49.24966,
+      "Longitude": -123.11934,
+      "Country": "Canada",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Vane",
+      "Latitude": 0.4254798,
+      "Longitude": 6.8228551,
+      "Country": "Ghana",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Vijayawada",
+      "Latitude": 16.50745,
+      "Longitude": 80.6466,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Vila Velha",
+      "Latitude": -20.32972,
+      "Longitude": -40.2925,
+      "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Waco",
+      "Latitude": 31.54933,
+      "Longitude": -97.14667,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Warri",
+      "Latitude": 5.51737,
+      "Longitude": 5.75006,
+      "Country": "Nigeria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Washington",
+      "Latitude": 38.89511,
+      "Longitude": -77.03637,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Waterloo",
+      "Latitude": 43.4668,
+      "Longitude": -80.51639,
+      "Country": "Canada",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Wichita",
+      "Latitude": 37.69224,
+      "Longitude": -97.33754,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Wilmington",
+      "Latitude": 34.23556,
+      "Longitude": -77.94604,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Yangon",
+      "Latitude": 16.80528,
+      "Longitude": 96.15611,
+      "Country": "Myanmar",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Yaoundé",
+      "Latitude": 3.86667,
+      "Longitude": 11.51667,
+      "Country": "Cameroon",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Yerevan",
+      "Latitude": 40.18111,
+      "Longitude": 44.51361,
+      "Country": "Armenia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Thiruvalla",
+      "Latitude": 9.383452,
+      "Longitude": 76.574059,
+      "Country": "India",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Metro Manila",
+      "Latitude": 14.651894,
+      "Longitude": 121.121567,
+      "Country": "Philippines",
+      "Map Status": "Current City"
+    },
+    {
+      "Name": "Bend",
+      "Latitude": 44.058174,
+      "Longitude": -121.315308,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Warwick",
+      "Latitude": 52.278217,
+      "Longitude": -1.58862,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Guildford",
+      "Latitude": 51.240551,
+      "Longitude": -0.580243,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Madang",
+      "Latitude": -5.22465,
+      "Longitude": 145.79656,
+      "Country": "Papua New Guinea",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Radcliff",
+      "Latitude": 37.8403456,
+      "Longitude": -85.9491298,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Kanungu",
+      "Latitude": -0.89695,
+      "Longitude": 29.775556,
+      "Country": "Uganda",
+      "Map Status": "Potential Future City"
+    }
+  ]
 }
