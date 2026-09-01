@@ -34,6 +34,12 @@
     #download-buttons {
       margin: 1em;
     }
+    #data-status {
+      font-size: 13px;
+      color: #666;
+      margin-top: -0.5em;
+      margin-bottom: 1em;
+    }
     /* This rule is now a fallback, inline styles will take precedence */
     .pin path {
       stroke: black;
@@ -68,7 +74,7 @@
 </head>
 <body>
   <h1>FaithTech Community Map</h1>
-  <input type="file" id="csvUpload" accept=".csv" />
+  <div id="data-status">Loading city data&hellip;</div>
   <div id="controls">
     <div>
       <label><input type="radio" name="projectionType" value="mercator" checked> Mercator</label>
@@ -97,7 +103,7 @@
   <script>
     let currentCityColor = "#F05228";
     const potentialCityColor = "#CDCDCD";
-    let cityData = null; // To store uploaded data
+    let cityData = null; // Populated from data/cities.json
 
     const width = 960;
     const height = 500;
@@ -136,10 +142,24 @@
     svg.call(zoom);
     g = svg.append("g");
 
-    d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json").then(worldData => {
+    Promise.all([
+      d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json"),
+      d3.json("data/cities.json")
+    ]).then(([worldData, citiesPayload]) => {
       land = topojson.feature(worldData, worldData.objects.countries);
       setProjection("mercator");
       renderMap();
+
+      cityData = citiesPayload.cities;
+      plotPoints(cityData);
+
+      const statusEl = document.getElementById("data-status");
+      const updated = new Date(citiesPayload.generatedAt);
+      statusEl.textContent = `City data last synced from Airtable: ${updated.toLocaleString()}`;
+    }).catch(err => {
+      console.error(err);
+      document.getElementById("data-status").textContent =
+        "Could not load city data (data/cities.json). Has the Airtable sync run yet?";
     });
 
     document.querySelectorAll("input[name='projectionType']").forEach(input => {
@@ -184,17 +204,6 @@
         .attr("stroke-width", 0.5)
         .attr("d", path);
     }
-
-    document.getElementById("csvUpload").addEventListener("change", function(evt) {
-      const file = evt.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        cityData = d3.csvParse(e.target.result);
-        plotPoints(cityData);
-      };
-      reader.readAsText(file);
-    });
 
     function plotPoints(data) {
       g.selectAll(".pin").remove();
@@ -270,7 +279,7 @@
           isCurrent: false
         }
       ];
-      
+
       legend.append("rect")
         .attr("x", -10)
         .attr("y", -15)
@@ -310,7 +319,7 @@
             }
         `;
         const styleElement = defs.append("style").text(styles);
-        
+
         // Allow browser time to fetch and apply font
         setTimeout(() => {
             callback();
@@ -376,4 +385,3 @@
   </script>
 </body>
 </html>
-
