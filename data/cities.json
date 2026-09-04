@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T10:56:02.503Z",
+  "generatedAt": "2026-09-04T10:55:40.412Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1266,7 +1266,7 @@
       "Latitude": 48.85341,
       "Longitude": 2.3488,
       "Country": "France",
-      "Map Status": "Potential Future City"
+      "Map Status": "Current City"
     },
     {
       "Name": "Patna",
@@ -1505,6 +1505,13 @@
       "Longitude": -122.33207,
       "Country": "United States of America",
       "Map Status": "Current City"
+    },
+    {
+      "Name": "Sendai",
+      "Latitude": 38.26667,
+      "Longitude": 140.86667,
+      "Country": "Japan",
+      "Map Status": "Potential Future City"
     },
     {
       "Name": "Seoul",
