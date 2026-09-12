@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T10:55:32.897Z",
+  "generatedAt": "2026-09-12T10:22:55.869Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1248,6 +1248,13 @@
       "Map Status": "Potential Future City"
     },
     {
+      "Name": "Ouagadougou",
+      "Latitude": 12.36566,
+      "Longitude": -1.53388,
+      "Country": "Burkina Faso",
+      "Map Status": "Potential Future City"
+    },
+    {
       "Name": "Oxford",
       "Latitude": 51.75222,
       "Longitude": -1.25596,
@@ -1553,6 +1560,13 @@
       "Latitude": 42.69751,
       "Longitude": 23.32415,
       "Country": "Bulgaria",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Sorocaba",
+      "Latitude": -23.50167,
+      "Longitude": -47.45806,
+      "Country": "Brazil",
       "Map Status": "Potential Future City"
     },
     {
