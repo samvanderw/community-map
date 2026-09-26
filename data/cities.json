@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T11:30:15.339Z",
+  "generatedAt": "2026-09-26T11:05:18.633Z",
   "cities": [
     {
       "Name": "Aba",
@@ -429,6 +429,13 @@
       "Map Status": "Potential Future City"
     },
     {
+      "Name": "Christchurch",
+      "Latitude": -43.53333,
+      "Longitude": 172.63333,
+      "Country": "New Zealand",
+      "Map Status": "Potential Future City"
+    },
+    {
       "Name": "Cincinnati",
       "Latitude": 39.12711,
       "Longitude": -84.51439,
@@ -650,6 +657,13 @@
       "Latitude": 60.16952,
       "Longitude": 24.93545,
       "Country": "Finland",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "High Wycombe",
+      "Latitude": 51.62907,
+      "Longitude": -0.74934,
+      "Country": "United Kingdom of Great Britain and Northern Ireland",
       "Map Status": "Potential Future City"
     },
     {
