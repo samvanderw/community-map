@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T12:27:35.382Z",
+  "generatedAt": "2026-09-30T12:12:33.812Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1288,6 +1288,13 @@
       "Longitude": 2.3488,
       "Country": "France",
       "Map Status": "Current City"
+    },
+    {
+      "Name": "Pasig City",
+      "Latitude": 14.58691,
+      "Longitude": 121.0614,
+      "Country": "Philippines",
+      "Map Status": "Potential Future City"
     },
     {
       "Name": "Patna",
