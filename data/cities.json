@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:58:15.816Z",
+  "generatedAt": "2026-10-08T13:06:21.076Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1535,6 +1535,13 @@
       "Map Status": "Current City"
     },
     {
+      "Name": "Sendai",
+      "Latitude": 38.26667,
+      "Longitude": 140.86667,
+      "Country": "Japan",
+      "Map Status": "Potential Future City"
+    },
+    {
       "Name": "Seoul",
       "Latitude": 37.566,
       "Longitude": 126.9784,
@@ -1854,6 +1861,13 @@
       "Latitude": -33.936667,
       "Longitude": 18.861389,
       "Country": "South Africa",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Canelones",
+      "Latitude": -34.5228,
+      "Longitude": -56.2778,
+      "Country": "Uruguay",
       "Map Status": "Potential Future City"
     }
   ]
