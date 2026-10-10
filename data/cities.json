@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T12:52:44.559Z",
+  "generatedAt": "2026-10-10T12:10:45.894Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1547,6 +1547,13 @@
       "Longitude": 126.9784,
       "Country": "Republic of Korea",
       "Map Status": "Current City"
+    },
+    {
+      "Name": "Shahkot",
+      "Latitude": 31.5709,
+      "Longitude": 73.48531,
+      "Country": "Pakistan",
+      "Map Status": "Potential Future City"
     },
     {
       "Name": "Shanghai",
