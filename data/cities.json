@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T11:07:10.288Z",
+  "generatedAt": "2026-10-16T11:02:10.755Z",
   "cities": [
     {
       "Name": "Aba",
@@ -590,6 +590,13 @@
       "Map Status": "Potential Future City"
     },
     {
+      "Name": "Fayetteville",
+      "Latitude": 35.05266,
+      "Longitude": -78.87836,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
       "Name": "Fort Wayne",
       "Latitude": 41.1306,
       "Longitude": -85.12886,
@@ -980,6 +987,13 @@
       "Longitude": -118.24368,
       "Country": "United States of America",
       "Map Status": "Current City"
+    },
+    {
+      "Name": "Louisville",
+      "Latitude": 38.25424,
+      "Longitude": -85.75941,
+      "Country": "United States of America",
+      "Map Status": "Potential Future City"
     },
     {
       "Name": "Lubbock",
