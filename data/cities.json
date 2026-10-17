@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T11:02:10.755Z",
+  "generatedAt": "2026-10-17T10:23:01.460Z",
   "cities": [
     {
       "Name": "Aba",
@@ -685,7 +685,7 @@
       "Latitude": 22.27832,
       "Longitude": 114.17469,
       "Country": "Hong Kong",
-      "Map Status": "Potential Future City"
+      "Map Status": "Current City"
     },
     {
       "Name": "Houston",
