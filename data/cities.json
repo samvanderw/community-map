@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T10:40:25.858Z",
+  "generatedAt": "2026-10-19T12:38:49.489Z",
   "cities": [
     {
       "Name": "Aba",
@@ -307,7 +307,7 @@
       "Latitude": 30.06263,
       "Longitude": 31.24967,
       "Country": "Egypt",
-      "Map Status": "Current City"
+      "Map Status": "Potential Future City"
     },
     {
       "Name": "Calgary",
@@ -553,13 +553,6 @@
       "Longitude": 9.70428,
       "Country": "Cameroon",
       "Map Status": "Potential Future City"
-    },
-    {
-      "Name": "Dubai",
-      "Latitude": 25.07725,
-      "Longitude": 55.30927,
-      "Country": "United Arab Emirates",
-      "Map Status": "Current City"
     },
     {
       "Name": "Dublin",
