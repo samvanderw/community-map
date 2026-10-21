@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T11:11:21.900Z",
+  "generatedAt": "2026-10-21T11:27:21.267Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1882,6 +1882,20 @@
       "Latitude": -34.5228,
       "Longitude": -56.2778,
       "Country": "Uruguay",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bridgetown",
+      "Latitude": 13.1036,
+      "Longitude": -59.6032,
+      "Country": "Barbados",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Roanoke",
+      "Latitude": 37.27097,
+      "Longitude": -79.94143,
+      "Country": "United States of America",
       "Map Status": "Potential Future City"
     }
   ]
