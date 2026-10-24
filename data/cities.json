@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T11:16:53.670Z",
+  "generatedAt": "2026-10-24T10:36:40.230Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1406,13 +1406,6 @@
       "Latitude": 35.7721,
       "Longitude": -78.63861,
       "Country": "United States of America",
-      "Map Status": "Potential Future City"
-    },
-    {
-      "Name": "Recife",
-      "Latitude": -8.05389,
-      "Longitude": -34.88111,
-      "Country": "Brazil",
       "Map Status": "Potential Future City"
     },
     {
