@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T12:25:52.270Z",
+  "generatedAt": "2026-10-29T12:36:11.580Z",
   "cities": [
     {
       "Name": "Aba",
@@ -699,7 +699,7 @@
       "Latitude": 17.38405,
       "Longitude": 78.45636,
       "Country": "India",
-      "Map Status": "Potential Future City"
+      "Map Status": "Current City"
     },
     {
       "Name": "Iaşi",
