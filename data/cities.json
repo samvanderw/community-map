@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T12:36:11.580Z",
+  "generatedAt": "2026-10-30T12:27:21.321Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1889,6 +1889,13 @@
       "Latitude": 37.27097,
       "Longitude": -79.94143,
       "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Itapema",
+      "Latitude": -27.094585,
+      "Longitude": -48.613472,
+      "Country": "Brazil",
       "Map Status": "Potential Future City"
     }
   ]
