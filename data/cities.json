@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T13:53:44.569Z",
+  "generatedAt": "2026-11-04T14:01:47.421Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1896,6 +1896,13 @@
       "Latitude": -27.094585,
       "Longitude": -48.613472,
       "Country": "Brazil",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Maroochydore",
+      "Latitude": -26.6553,
+      "Longitude": 153.0932,
+      "Country": "Australia",
       "Map Status": "Potential Future City"
     }
   ]
