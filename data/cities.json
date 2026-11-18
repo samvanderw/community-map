@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T15:43:28.182Z",
+  "generatedAt": "2026-11-18T15:23:57.313Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1276,13 +1276,6 @@
       "Map Status": "Potential Future City"
     },
     {
-      "Name": "Oxford",
-      "Latitude": 51.75222,
-      "Longitude": -1.25596,
-      "Country": "United Kingdom of Great Britain and Northern Ireland",
-      "Map Status": "Potential Future City"
-    },
-    {
       "Name": "Pamplona",
       "Latitude": 42.81687,
       "Longitude": -1.64323,
@@ -1903,6 +1896,13 @@
       "Latitude": -26.6553,
       "Longitude": 153.0932,
       "Country": "Australia",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Bungoma",
+      "Latitude": 0.569525,
+      "Longitude": 34.558376,
+      "Country": "Kenya",
       "Map Status": "Potential Future City"
     }
   ]
