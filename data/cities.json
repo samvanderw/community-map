@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T15:07:21.910Z",
+  "generatedAt": "2026-11-21T14:26:29.862Z",
   "cities": [
     {
       "Name": "Aba",
@@ -1231,6 +1231,13 @@
       "Latitude": 40.402714,
       "Longitude": -74.305428,
       "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Ondo",
+      "Latitude": 7.09316,
+      "Longitude": 4.83528,
+      "Country": "Nigeria",
       "Map Status": "Potential Future City"
     },
     {
