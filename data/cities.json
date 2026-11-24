@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T17:43:52.816Z",
+  "generatedAt": "2026-11-24T17:16:21.680Z",
   "cities": [
     {
       "Name": "Aba",
@@ -629,6 +629,13 @@
       "Latitude": 34.851354,
       "Longitude": -82.3984882,
       "Country": "United States of America",
+      "Map Status": "Potential Future City"
+    },
+    {
+      "Name": "Guadalajara",
+      "Latitude": 20.66682,
+      "Longitude": -103.39182,
+      "Country": "Mexico",
       "Map Status": "Potential Future City"
     },
     {
